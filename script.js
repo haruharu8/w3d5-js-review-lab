@@ -63,3 +63,102 @@ if(animal == "cow"){
 }else{
     console.log("Hey! You're not a cow");
 }
+
+// E.
+
+let personAge = 15;
+
+if(personAge >= 16){
+    console.log("Here are the keys!");
+}else{
+    console.log("Sorry, you're too young");
+}
+
+// II. 
+
+// A.
+
+for(let i = 0; i < 11; i++){
+    console.log(i);
+}
+
+for(let i = 10; i < 401; i++){
+    console.log(i);
+}
+
+for(let i = 12; i < 4001; i += 3){
+    console.log(i);
+}
+
+// B. 
+
+for(let i = 1; i < 101; i++){
+
+    if(i % 2 == 0){
+        console.log(i, " <--- is an even number");
+    }else{
+        console.log(i);
+    }
+    
+}
+
+// C.
+
+for(let i = 0; i < 101; i++){
+    if(i % 5 == 0 && i % 3 == 0){
+        console.log("I found a ", i, " Three is a crowd. High five!");
+    }else if(i % 5 == 0){
+        console.log("I found a ", i, " High five!");
+    }else if(i % 3 == 0){
+        console.log("I found a ", i, " Three is a crowd.");
+    }
+}
+
+// D. 
+
+let bank_account = 0;
+
+for(let i = 1; i < 11; i++){
+    bank_account += i;
+}
+
+console.log(bank_account);
+
+let bankAccountDoubled = 0;
+
+for(let i = 1; i < 101; i++){
+    bankAccountDoubled = bankAccountDoubled + i * 2;
+}
+
+console.log(bankAccountDoubled);
+
+/* III.
+
+A. 
+    1. Elements or items
+    2. The elements will not always be in order, but the indexes will always be from 0 ... length of array - 1
+    3. list of all types (ie: grocery, parking spots, movies)
+
+*/
+
+// B.
+const quotes = ["Quoth the raven", "nevermore", "something something"];
+
+// C. 
+
+const randomThings = [1, 10, "Hello", true];
+
+console.log(randomThings[0]);
+randomThings[2] = "World";
+// we check via console logging
+console.log(randomThings[2]);
+
+// D.
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+
+console.log(ourClass[2]);
+ourClass[4] = "Octocat";
+ourClass.push("Cloud City");
+
+console.log(ourClass);
+
