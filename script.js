@@ -136,7 +136,7 @@ console.log(bankAccountDoubled);
 
 A. 
     1. Elements or items
-    2. The elements will not always be in order, but the indexes will always be from 0 ... length of array - 1
+    2. The elements will not always be in order, but the indexes will always be from 0 ... length of array - 1 in order
     3. list of all types (ie: grocery, parking spots, movies)
 
 */
@@ -161,4 +161,187 @@ ourClass[4] = "Octocat";
 ourClass.push("Cloud City");
 
 console.log(ourClass);
+
+//E.
+const myArray = [5, 10, 500, 20]
+myArray.push("Aegon", "Hogar");
+console.log(myArray);
+myArray.shift() ;
+console.log(myArray);
+myArray.unshift("Bob Marley");
+console.log(myArray);
+myArray.pop();
+console.log(myArray);
+myArray.reverse();
+console.log(myArray);
+//5. Yes we did. Mutate means that we changed the array that we used the method on. It return the array reversed. 
+
+
+//F.  
+let numberF = 7
+if (numberF < 100){
+    console.log("little number")
+}else {
+    console.log("big number")
+}
+
+
+//G.
+if (numberF <5){
+    console.log("little number") 
+} else if (numberF > 10){
+    console.log("big number") 
+} else{
+    console.log("monkey") 
+}
+
+//H.
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+];
+
+const thomsCloset = [
+    [
+        "grey button-up",
+        "dark grey button-up",
+        "light blue button-up",
+        "blue button-up"
+    ],[
+        "grey jeans",
+        "jeans",
+        "PJs"
+    ],[
+        "wool mittens",
+        "wool scarf",
+        "raybans"
+    ]
+];
+
+console.log("Kristyn is rocking that", kristynsCloset[2], " today!");
+
+kristynsCloset.splice(6, 0, "raybans");
+console.log(kristynsCloset);
+
+kristynsCloset[5] = "stained knit hat";
+console.log(kristynsCloset);
+
+console.log(thomsCloset[0][0]);
+console.log(thomsCloset[1][0]);
+console.log(thomsCloset[2][0]);
+
+console.log("Thom is looking fierce in a",thomsCloset[0][0],",",thomsCloset[1][0],", and",thomsCloset[2][0]);
+
+thomsCloset[1][2] = "Footie Pajamas";
+console.log(thomsCloset);
+
+// IV.
+
+const printGreeting = (name) => {
+    return "Hello there, " + name;
+};
+
+console.log(printGreeting("Cynthia"));
+
+function printCool(name){
+    return name + " is cool!";
+}
+
+console.log(printCool("DJ"));
+
+const calculateCube = (number) => number ** 3;
+
+console.log(calculateCube(3));
+
+const isVowel = (character) => {
+    const lower = character.toLowerCase();
+    if(lower === "a" || lower === "e" || lower === "i" || lower === "o" || lower === "u"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+console.log(isVowel("A"));
+console.log(isVowel("e"));
+console.log(isVowel("I"));
+console.log(isVowel("O"));
+console.log(isVowel("U"));
+console.log(isVowel("z"));
+console.log(isVowel("zebra"));
+
+const getTwoLengths = (string1, string2) => {
+    return [string1.length, string2.length];
+}
+
+console.log(getTwoLengths("Barbie", "Ken"));
+
+// const getMultipleLengths = (array) => {
+//     const returnArray = [];
+//     for(item of array){
+//         returnArray.push(item.length);
+//     }
+//     return returnArray;
+// }
+
+// const getMultipleLengths = (array) => {
+//     const returnArray = [];
+//     array.forEach((item) => {
+//         returnArray.push(item.length);
+//     })
+//     return returnArray;
+// }
+
+const getMultipleLengths = (array) => {
+    let returnArray = array.map((item) => {
+        return item.length;
+    });
+    return returnArray;
+}
+
+console.log(getMultipleLengths(["Barbie", "Ken", "Shrek"]));
+
+const maxOfThree = (a, b, c) => {
+    if(a > b && a > c){
+        return a;
+    }else if(b > c){
+        return b;
+    }else{
+        return c;
+    }
+}
+console.log(maxOfThree(2, 1, 1));
+
+const longestWordArray = ["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"];
+
+const printLongestWord = (array) => {
+    let returnArray = [];
+    for(item of array){
+        returnArray.push(item.length);
+        console.log(returnArray);
+    }
+    const index = returnArray.indexOf(Math.max(...returnArray));
+    return array[index];
+}
+
+console.log(printLongestWord(longestWordArray));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
